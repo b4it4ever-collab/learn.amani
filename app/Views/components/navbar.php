@@ -34,8 +34,8 @@ $registerLabel = $registerLabel ?? 'Register';
                 <a href="#search" class="btn btn-link text-dark p-2" aria-label="Search">
                     <i class="bi bi-search"></i>
                 </a>
-                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill"><?= htmlspecialchars($loginLabel) ?></a>
-                <a href="#" class="btn btn-primary btn-sm rounded-pill"><?= htmlspecialchars($registerLabel) ?></a>
+                <a href="#loginModal" class="btn btn-outline-primary btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#loginModal"><?= htmlspecialchars($loginLabel) ?></a>
+                <a href="#loginModal" class="btn btn-primary btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#loginModal"><?= htmlspecialchars($registerLabel) ?></a>
             </div>
         </div>
     </div>

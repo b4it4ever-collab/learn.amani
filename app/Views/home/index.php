@@ -155,7 +155,7 @@ $links = $navbarLinks;
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="fw-semibold"><?= htmlspecialchars($course['price']) ?></span>
-                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Enroll</a>
+                            <a href="#loginModal" class="btn btn-outline-primary btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#loginModal">Enroll</a>
                         </div>
                     </div>
                 </div>
@@ -253,6 +253,40 @@ $links = $navbarLinks;
         </div>
     </div>
 </section>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg rounded-4">
+            <div class="modal-header border-0 pb-0">
+                <div>
+                    <h5 class="modal-title fw-bold" id="loginModalLabel">Welcome back</h5>
+                    <p class="text-muted small mb-0">Sign in to continue learning</p>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 pt-2">
+                <form>
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label small fw-semibold">Email address</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="you@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label small fw-semibold">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <label class="form-check-label small text-muted" for="rememberMe">Remember me</label>
+                        </div>
+                        <a href="#" class="small text-primary fw-semibold">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 rounded-pill">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section id="contact" class="container py-5">
     <div class="newsletter-shell glass-card rounded-4 p-4 p-lg-5 text-center">
