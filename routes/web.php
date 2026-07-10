@@ -1,5 +1,9 @@
 <?php
+// routes/web.php
 
-use App\Controllers\HomeController;
+// Existing routes...
+$router->get('/', 'HomeController@index');
 
-$router->get('/', [HomeController::class, 'index']);
+// New Enrollment Route
+// The 'middleware' => 'AuthMiddleware' will trigger the check before the controller runs
+$router->post('/enroll/{id}', 'EnrollController@enroll', ['middleware' => 'AuthMiddleware']);
