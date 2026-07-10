@@ -31,6 +31,16 @@ class ViewRenderer
         include $viewPath;
         $content = ob_get_clean();
 
+        $layout = $data['layout'] ?? 'layouts.app';
+        $layoutPath = $this->resolveViewPath($layout);
+
+        if (is_file($layoutPath)) {
+            ob_start();
+            include $layoutPath;
+            echo ob_get_clean();
+            return;
+        }
+
         echo $content;
     }
 

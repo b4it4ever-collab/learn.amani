@@ -6,13 +6,19 @@
     <title><?= htmlspecialchars($title ?? 'Learn.Amani') ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="/assets/css/variables.css" rel="stylesheet">
     <link href="/assets/css/app.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/components.css" rel="stylesheet">
+    <link href="/assets/css/responsive.css" rel="stylesheet">
 </head>
 <body>
     <main class="container py-4 py-lg-5">
         <?= $content ?? '' ?>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/app.js"></script>
     <script src="/assets/js/homepage.js"></script>
 </body>
 </html>

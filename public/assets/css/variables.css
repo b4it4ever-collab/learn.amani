@@ -1,0 +1,2 @@
+/* Shared CSS variables are defined in app.css. This file exists to satisfy the layout asset chain without changing the current design. */
+@import url('/assets/css/app.css');
