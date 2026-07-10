@@ -1,10 +1,5 @@
 <?php
 
-use App\Core\Router;
+use App\Controllers\HomeController;
 
-$router->get('/', function ($request, $response, $session, $database) {
-    $response->json([
-        'message' => 'Learn.Amani foundation is ready.',
-        'version' => '1.0.0',
-    ]);
-});
+$router->get('/', [HomeController::class, 'index']);
